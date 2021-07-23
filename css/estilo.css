@@ -54,6 +54,8 @@
   height: 100%;
   align-items: center; }
   .main .main__section {
+    display: flex;
+    flex-wrap: wrap;
     background-color: #ee7aee;
     width: 1000px;
     height: 800px;

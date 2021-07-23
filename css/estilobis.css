@@ -74,17 +74,18 @@ li a{
 }
 
 main{
-    max-height: 750px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     margin: 20px,20px,20px,20px;
     display: grid;
     background-color:#ccff99 ;
 }
 section{
     margin-top: 30px;
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: 450px 450px 450px;
-    grid-template-areas: "lemon brownie brownie";
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     column-gap: 15px;
     row-gap: 15px;
 
@@ -153,18 +154,22 @@ h4{
     }
 }
 
-@media only screen and( max width:600px ){
+@media only screen and(max-width: 600px){
+    main{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 20px,20px,20px,20px;
+        background-color:#ccff99 ;
+    }    
+    
     section{
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
-        flex-wrap: nowrap;
         align-content: center;
         justify-content: center;
         align-items: center;
-        display:grid;
-        grid-template-columns : 30%;
-        grid-template-rows:500px;
-        grid-area: 100%;
         height: min-content;
         justify-items: center;
         column-gap: 15px;
@@ -173,5 +178,19 @@ h4{
         justify-items: center;
     }
 }
+@media only screen and( min-width: 600px){
 
-    
+    section{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 450px 450px 450px;
+    grid-template-areas: "lemon brownie brownie";
+    column-gap: 15px;
+    row-gap: 15px;
+   
+
+   }
+   
+
+}
